@@ -1,0 +1,7 @@
+{{#each this}}
+<li class="gallery__item">
+    <a class="gallery__link" href="{{this.original}}">
+        <img class="gallery__image" src="{{this.preview}}" data-source="{{this.original}}" alt="{{this.description}}" />
+    </a>
+</li>
+{{/each}}
