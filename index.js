@@ -1,5 +1,22 @@
 const Handlebars = require('handlebars');
 
+const galleryList = document.querySelector('.js-gallery');
+const lightbox = document.querySelector('.js-lightbox');
+const lightboxImage = document.querySelector('.lightbox__image');
+
+// import slidesHbs from "./template.hbs";
+// const markup = slidesHbs(galleryItems)
+// galleryList.insertAdjacentElement("beforeend", markup)
+
+// import "./style.css";
+
+import slidesTemplate from "./slides-template.hbs";
+
+import "./style.css";
+
+const markup = galleryItems.map(item => slidesTemplate(item)).join("");
+galleryList.insertAdjacentHTML("beforeend", markup);
+
 const galleryItems = [
   {
     preview:
@@ -66,15 +83,15 @@ const galleryItems = [
   },
 ];
 
-import slidesHbs from "./template.hbs";
-const markup = slidesHbs()
-galleryList.insertAdjacentElement("beforeend", markup)
+// import slidesHbs from "./template.hbs";
+// const markup = slidesHbs(galleryItems)
+// galleryList.insertAdjacentElement("beforeend", markup)
 
-import "./style.css";
+// import "./style.css";
 
-const galleryList = document.querySelector('.js-gallery');
-const lightbox = document.querySelector('.js-lightbox');
-const lightboxImage = document.querySelector('.lightbox__image');
+// const galleryList = document.querySelector('.js-gallery');
+// const lightbox = document.querySelector('.js-lightbox');
+// const lightboxImage = document.querySelector('.lightbox__image');
 
 // Заповнення списку елементів галереї
 // const createGalleryItem = ({ preview, original, description}) =>
